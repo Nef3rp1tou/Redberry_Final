@@ -1,0 +1,101 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling outside the viewport */
+    background: #F3F2FA;
+    z-index: -1; /* Place the background behind other elements */
+    font-family: 'FiraGO', sans-serif;
+}
+
+
+
+   
+header {
+   
+    height: 80px;
+    border: 0px 0px 1px 0px;
+    background:
+                linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  
+}
+
+
+#logo {
+        
+        width: 150px;
+        height: 24px;
+        margin-top: 28px;
+        margin-left: 76px;
+    }
+
+
+    #login-btn {
+        float: right;
+        width: 93px !important;
+        height: 40px !important;
+        margin-top: 20px;
+        margin-right: 100px;
+        padding: 10px 20px;
+        gap: 10px;
+        background-color: #5d37f3;
+        color: #ffffff;
+        border-radius: 8px;
+        border: none;
+        font-family: 'FiraGO', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    #Blog
+    {   float: left;
+        width: 225px;
+        height: 72px;
+        margin-top: 120px;
+        margin-left: 89px;
+        font-family: FiraGO;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+    #BlogImg{
+        float: right;
+        width: 624px;
+        height: 200px;
+        margin-top: 100px;
+        margin-right: 100px;
+
+    }
+/* Add to your existing CSS */
+
+.categories {
+    display: flex; /* Use flexbox for laying out category items */
+    justify-content: center; /* Space out the categories evenly */
+    flex-wrap: wrap; /* Allow categories to wrap onto new lines */
+    margin-top: 400px; /* Add some space between the image and the categories */
+    
+  }
+  
+  /* Styling individual category items */
+  .category-item {
+    padding: 10px 15px; /* Add padding inside the categories */
+    margin: 5px; /* Add some space around each category */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* A subtle shadow */
+    font-weight: bold; /* Make the text bold */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 15px;
+  }
+  
+  /* Hover effect for category items */
+  .category-item:hover {
+    transform: scale(1.05); /* Scale up the category item a bit */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increase the shadow */
+  }
