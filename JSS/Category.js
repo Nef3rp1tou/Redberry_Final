@@ -1,5 +1,4 @@
-const apiBaseUrl = 'https://api.blog.redberryinternship.ge/api';
-const token = "bddfb9c3a63376dbc4d41d6bcf3a539b5b4ebb7f698fba7b161dc156557977aa";
+import { token, apiBaseUrl } from "./Api.js";
 
 // Function to get all categories
 function getAllCategories() {
@@ -21,14 +20,13 @@ function getAllCategories() {
   });
 }
 
-// Function to display categories
+
 function displayCategories(categories) {
   const categoriesContainer = document.getElementById('categories-container');
-  
-  // Clear the container before displaying new categories
+
   categoriesContainer.innerHTML = '';
 
-  // Iterate through the categories and display them
+
   categories.forEach(category => {
     const categoryDiv = document.createElement('div');
     categoryDiv.classList.add('category-item');
@@ -40,7 +38,7 @@ function displayCategories(categories) {
   });
 }
 
-// Call this function to fetch and display categories
+
 getAllCategories().then(displayCategories);
 
-// You can add more functions as needed for your application
+

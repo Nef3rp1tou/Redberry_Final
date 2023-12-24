@@ -1,38 +1,230 @@
 {
-    "data": [
-      {
-        "id": 1,
-        "title": "Blog title",
-        "description": "Blog description",
-        "image": "https://via.placeholder.com/150",
-        "publish_date": "2023-11-19 00:00:00",
-        "categories": [
-          {
-            "id": 1,
-            "name": "Category name",
-            "text_color": "#ffffff",
-            "background_color": "#000000"
-          }
-        ],
-        "author": "გელა გელაშვილი"
-      },
-      {
-        "id": 2,
-        "title": "Blog title",
-        "description": "Blog description",
-        "image": "https://via.placeholder.com/150",
-        "publish_date": "2023-11-19 00:00:00",
-        "categories": [
-          {
-            "id": 1,
-            "name": "Category name",
-            "text_color": "#ffffff",
-            "background_color": "#000000"
-          }
-        ],
-        "author": "გელა გელაშვილი"
-      }
-
-    ]
-  }     
-  
+  "data": [
+    {
+      "id": 1,
+      "title": "Navigating the Entrepreneurial Seas",
+      "description": "Join entrepreneur and business strategist, Michelle Rodriguez, as she shares her insights and strategies for navigating the complex waters of entrepreneurship.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2023-11-19 00:00:00",
+      "categories": [
+        {
+          "id": 1,
+          "name": "მარკეტი",
+          "text_color": "#ffffff",
+          "background_color": "#000000"
+        },
+        {
+          "id": 2,
+          "name": "დამზადება",
+          "text_color": "#ffffff",
+          "background_color": "#008080"
+        }
+      ],
+      "author": "გიორგი გიორგაძე"
+    },
+    {
+      "id": 2,
+      "title": "Beyond the Canvas: Modern Art Explorations",
+      "description": "Art curator and critic, Sophia Martinez, takes readers on a journey beyond the canvas, exploring the latest trends and controversies in the world of modern art.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2023-12-05 00:00:00",
+      "categories": [
+        {
+          "id": 3,
+          "name": "კვლევა",
+          "text_color": "#000000",
+          "background_color": "#FFD700"
+        },
+        {
+          "id": 4,
+          "name": "სპორტი",
+          "text_color": "#ffffff",
+          "background_color": "#008000"
+        }
+      ],
+      "author": "ოლივია რამოს"
+    },
+    {
+      "id": 3,
+      "title": "The Tech Innovator's Playground",
+      "description": "Tech enthusiast and inventor, Daniel Kim, opens the doors to the latest breakthroughs in technology, exploring the realms of AI, robotics, and more.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-01-15 00:00:00",
+      "categories": [
+        {
+          "id": 5,
+          "name": "UI/UX",
+          "text_color": "#ffffff",
+          "background_color": "#4B0082"
+        },
+        {
+          "id": 6,
+          "name": "Figma",
+          "text_color": "#000000",
+          "background_color": "#FF4500"
+        }
+      ],
+      "author": "Daniel Kim"
+    },
+    {
+      "id": 4,
+      "title": "Healing Harmonies: Music for the Soul",
+      "description": "Join music therapist, Elena Rodriguez, as she explores the therapeutic power of music, sharing personal stories and expert insights on its healing effects.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-02-28 00:00:00",
+      "categories": [
+        {
+          "id": 7,
+          "name": "მუსიკა",
+          "text_color": "#ffffff",
+          "background_color": "#4682B4"
+        },
+        {
+          "id": 8,
+          "name": "სამშენებლო",
+          "text_color": "#000000",
+          "background_color": "#8B4513"
+        }
+      ],
+      "author": "Elena Rodriguez"
+    },
+    {
+      "id": 5,
+      "title": "The Mindful Explorer's Journal",
+      "description": "Adventurer and mindfulness advocate, Leo Thompson, shares tales of exploration and self-discovery, encouraging readers to embrace mindfulness in their journeys.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-03-20 00:00:00",
+      "categories": [
+        {
+          "id": 9,
+          "name": "სამუშაო გარემო",
+          "text_color": "#ffffff",
+          "background_color": "#228B22"
+        },
+        {
+          "id": 10,
+          "name": "სამედიცინო",
+          "text_color": "#000000",
+          "background_color": "#9932CC"
+        }
+      ],
+      "author": "Leo Thompson"
+    },
+    {
+      "id": 6,
+      "title": "The Green Thumb Chronicles",
+      "description": "Horticulturist and environmentalist, Maria Lopez, invites readers to explore the world of gardening, sustainable landscaping, and the joy of nurturing green spaces.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-04-10 00:00:00",
+      "categories": [
+        {
+          "id": 11,
+          "name": "სამედიცინო",
+          "text_color": "#ffffff",
+          "background_color": "#008000"
+        },
+        {
+          "id": 12,
+          "name": "სხვა",
+          "text_color": "#000000",
+          "background_color": "#FF4500"
+        }
+      ],
+      "author": "Maria Lopez"
+    },
+    {
+      "id": 7,
+      "title": "Beyond Binary: Exploring AI Ethics",
+      "description": "Ethicist and AI researcher, Jonathan Chen, delves into the ethical considerations surrounding artificial intelligence, aiming to foster a deeper understanding of its societal impacts.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-05-22 00:00:00",
+      "categories": [
+        {
+          "id": 1,
+          "name": "მარკეტი",
+          "text_color": "#ffffff",
+          "background_color": "#000000"
+        },
+        {
+          "id": 2,
+          "name": "დამზადება",
+          "text_color": "#ffffff",
+          "background_color": "#008080"
+        }
+      ],
+      "author": "Jonathan Chen"
+    },
+    {
+      "id": 8,
+      "title": "The Culinary Alchemist",
+      "description": "Renowned chef and culinary innovator, Isabella Santoro, reveals the secrets behind her avant-garde creations, blending science and artistry in the world of gastronomy.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-06-15 00:00:00",
+      "categories": [
+        {
+          "id": 3,
+          "name": "კვლევა",
+          "text_color": "#000000",
+          "background_color": "#FFD700"
+        },
+        {
+          "id": 4,
+          "name": "სპორტი",
+          "text_color": "#ffffff",
+          "background_color": "#008000"
+        }
+      ],
+      "author": "Isabella Santoro"
+    },
+    {
+      "id": 9,
+      "title": "The Future of Fashion Tech",
+      "description": "Fashion technologist and designer, Alejandro Ramirez, explores the cutting-edge technologies shaping the future of the fashion industry.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-07-08 00:00:00",
+      "categories": [
+        {
+          "id": 5,
+          "name": "UI/UX",
+          "text_color": "#ffffff",
+          "background_color": "#4B0082"
+        },
+        {
+          "id": 6,
+          "name": "Figma",
+          "text_color": "#000000",
+          "background_color": "#FF4500"
+        }
+      ],
+      "author": "Alejandro Ramirez"
+    },
+    {
+      "id": 10,
+      "title": "The Astronomer's Gazette",
+      "description": "Embark on a cosmic journey with astronomer and stargazer, Dr. Celeste Parker, as she unveils the mysteries of the universe and shares the latest astronomical discoveries.",
+      "image": "https://via.placeholder.com/150",
+      "publish_date": "2024-08-20 00:00:00",
+      "categories": [
+        {
+          "id": 7,
+          "name": "მუსიკა",
+          "text_color": "#ffffff",
+          "background_color": "#4682B4"
+        },
+        {
+          "id": 8,
+          "name": "სამშენებლო",
+          "text_color": "#000000",
+          "background_color": "#8B4513"
+        },
+        {
+          "id": 9,
+          "name": "სამუშაო გარემო",
+          "text_color": "#ffffff",
+          "background_color": "#228B22"
+        }
+      ],
+      "author": "Dr. Celeste Parker"
+    }
+  ]
+}

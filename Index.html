@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Website</title>
-    <link rel="stylesheet" href="Design/index.css">
-    <link rel="stylesheet" href="Design//firaGO.css"> <!-- Link to the generated CSS file -->
-
-</head>
-<body >
- 
-
+    <link rel="stylesheet" href="/Design/index.css" />
+  </head>
+  <body>
     <header>
-            <!-- Replace the following with your actual logo image -->
-            <img id = "logo" src="Media\RedBerryLogo.png" alt="Your Logo">
-            <button onclick="" id="login-btn">შესვლა</button>
+      <img id="logo" src="Media\RedBerryLogo.png" alt="Your Logo" />
+      <button onclick="toggleLoginForm()" id="login-btn">შესვლა</button>
     </header>
     <h1 id="Blog">ბლოგი</h1>
-    <img id="BlogImg" src="Media/Blogimg.png" alt="">
-    
- <!-- Your main content goes here -->
- <div id="categories-container" class="categories">
-    <!-- Categories will be inserted here by your JavaScript -->
-</div>
+    <img id="BlogImg" src="Media/Blogimg.png" alt="" />
 
-    <script src="JSS/Api/Category.js" defer></script>
+    <div id="login-container" class="sign-in-container" style="display: none">
+      <div class="close-button" onclick="closeLoginForm()">x</div>
+      <h2>შესვლა</h2>
+      <form id="loginForm" class="sign-in-form">
+        <label id="emailLabel" for="email">ელ-ფოსტა</label>
+        <input type="text" name="email" id="email" placeholder="example@redberry.ge" />
+        <span id="loginError" class="error-message">
+          <img
+            src="Media\error.png"
+            class="error-icon"
+            id="error-icon"
+            alt="Error Icon"
+          />
+          <p id="error-message"></p>
+        </span>
+        <button type="submit" id="submit">შესვლა</button>
+      </form>
+    </div>
 
-    <!-- Include the Api.js script -->
-    <script src="JSS/Api/Api.js" defer></script>
-</body>
+    <div id="SuccessfulLogin" class="Logined" style="display: none">
+      <div class="close-button2" onclick="closeSuccessfulLogin()">x</div>
+      <div id="succes">
+        <img src="Media/tick-circle.png" id="success" alt="">
+      <h2 id="success-label">წარმატებული ავტორიზაცია</h2>
+      <button id="okay" onclick="closeSuccessfulLogin()">კარგი</button>
+      </div>
+    </div>
 
+    <div id="categories-container" class="categories"></div>
+
+    <script type="module" src="/JSS/Category.js" defer></script>
+    <script type="module" src="/JSS/Api.js" defer></script>
+    <script type="module" src="/JSS/Login.js" defer></script>
+  </body>
 </html>

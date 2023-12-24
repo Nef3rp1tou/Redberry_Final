@@ -1,0 +1,27 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F3F2FA;
+    font-family: 'FiraGO', sans-serif;
+}
+.h1
+{   
+     font-family: 'FiraGO', sans-serif;
+
+
+}
+
+header {
+    text-align: center;
+    height: 80px;
+    border-bottom: 1px solid transparent;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
+
+#logo {
+    width: 150px;
+    height: 24px;
+    margin: 28px 0 0 76px;
+}
