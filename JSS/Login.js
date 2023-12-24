@@ -78,29 +78,33 @@ document.getElementById('submit').addEventListener('click', function(event) {
     loginError.style.display = "block";
     errorMsg.textContent = "გთხოვთ შეიყვანოთ ელ-ფოსტა";
     setEmailErrorStyles();
-  } else if (!regex.test(email)) {
-    loginError.style.display = "block";
-    errorMsg.textContent = "ელ-ფოსტა უნდა მთავრდებოდეს @redberry.ge";
-    setEmailErrorStyles();
   } else {
-    validateEmail(email)
-      .then(result => {
-        if (result.success) {
-          closeDisplay("login-container");
-          toggleDisplay("SuccessfulLogin");
-          changeButtonToAddBlog();
-        } else {
-          loginError.style.display = "block";
-          errorMsg.textContent = "ელ-ფოსტა არ მოიძებნა";
-          setEmailErrorStyles();
-        }
-      })
-      .catch(() => {
+    // Fetch request to login API
+    fetch(`${apiBaseUrl}/login`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Authorization": `Bearer ${token}`},
+      body: JSON.stringify({ email })
+    })
+    .then((response) => {
+      if (response.status === 204) {
+        closeDisplay("login-container");
+        toggleDisplay("SuccessfulLogin");
+        changeButtonToAddBlog();
+      } else if (!regex.test(email)) {
         loginError.style.display = "block";
-        errorMsg.textContent = "Network error: Please check your internet connection.";
+        errorMsg.textContent = "ელ-ფოსტა უნდა მთავრდებოდეს @redberry.ge";
         setEmailErrorStyles();
-      });
+      } else {
+        loginError.style.display = "block";
+        errorMsg.textContent = "ელ-ფოსტა არ მოიძებნა";
+        setEmailErrorStyles();
+      }
+    })
+    .catch(() => {
+      loginError.style.display = "block";
+      errorMsg.textContent = "Network error: Please check your internet connection.";
+      setEmailErrorStyles();
+    });
   }
 });
-
 
