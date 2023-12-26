@@ -11,6 +11,7 @@ const toggleBlurredStyles = (elements, isVisible) => {
   });
 };
 
+// Function to toggle display of an element
 const toggleDisplay = (containerId) => {
   const container = document.getElementById(containerId);
   const elementsToBlur = document.querySelectorAll(`body > *:not(#${containerId})`);
@@ -18,9 +19,12 @@ const toggleDisplay = (containerId) => {
   
   container.style.display = isContainerVisible ? "none" : "block";
   toggleBlurredStyles(elementsToBlur, !isContainerVisible);
+
+  // If the container is being closed, check if it's the login container and reset the form
+  if (!isContainerVisible && containerId === "login-container") {
+    resetLoginForm();
+  }
 };
-
-
 
 // Re-used function to close displays
 const closeDisplay = (containerId) => toggleDisplay(containerId);
@@ -29,35 +33,55 @@ window.toggleLoginForm = () => toggleDisplay("login-container");
 window.closeLoginForm = () => closeDisplay("login-container");
 window.toggleSuccessfulLogin = () => toggleDisplay("SuccessfulLogin");
 window.closeSuccessfulLogin = () => closeDisplay("SuccessfulLogin");
-// Validate email function
-const validateEmail = (email) => {
-  // Replace this with your actual email validation logic (e.g., API call)
-  return new Promise((resolve) => {
-    // Simulating a delay with setTimeout
-    setTimeout(() => {
-      const isEmailValid = regex.test(email); // Replace with actual validation logic
-      resolve({ success: isEmailValid });
-    }, 1000); // Simulated delay of 1 second
-  });
+window.logout = () => {
+  // Clear the token from localStorage
+  localStorage.removeItem('authToken');
 };
+
+// Function to reset the login form
+const resetLoginForm = () => {
+  const loginForm = document.getElementById("loginForm");
+  if (loginForm) {
+    loginForm.reset(); // Reset the form fields
+    const emailInput = document.getElementById('email');
+    emailInput.style.backgroundColor = ""; // Reset background color
+    emailInput.style.border = ""; // Reset border
+    emailInput.classList.remove('error'); // Remove error class
+
+    const loginError = document.getElementById("loginError");
+    loginError.style.display = "none"; // Hide the login error message
+  }
+};
+
+// Validate email function
+const setAuthToken = (token) => {
+  localStorage.setItem('authToken', token);
+};
+
+const checkLoggedIn = () => {
+  const authToken = localStorage.getItem('authToken');
+  if (authToken) {
+    toggleDisplay("SuccessfulLogin");
+    closeDisplay("SuccessfulLogin");
+    changeButtonToAddBlog();
+  }
+};
+
+document.addEventListener('DOMContentLoaded', checkLoggedIn);
+
 const changeButtonToAddBlog = () => {
   const oldLoginButton = document.getElementById('login-btn');
-
-  // Create a new button for adding blogs
   const addBlogButton = document.createElement('button');
   addBlogButton.textContent = 'ბლოგის დამატება';
-  addBlogButton.id = 'add-blog-btn'; // Assign a new ID or reuse the old one
-  addBlogButton.classList.add('add-blog-button'); // Add any necessary classes
+  addBlogButton.id = 'add-blog-btn';
+  addBlogButton.classList.add('add-blog-button');
   
-  // Function to navigate to the new blog page
   const navigateToAddBlogPage = () => {
-    window.location.href = 'addBlog.html'; // Replace with the actual path to your new HTML page
+    window.location.href = 'addBlog.html';
   };
 
-  // Add the click event listener to the new button
   addBlogButton.addEventListener('click', navigateToAddBlogPage);
 
-  // Replace the old login button with the new add blog button
   oldLoginButton.parentNode.replaceChild(addBlogButton, oldLoginButton);
 };
 
@@ -69,7 +93,7 @@ document.getElementById('submit').addEventListener('click', function(event) {
   const errorMsg = document.getElementById("error-message");
 
   const setEmailErrorStyles = () => {
-    document.getElementById('email').style.backgroundColor = "#FAF2F3"; // Corrected to target background color
+    document.getElementById('email').style.backgroundColor = "#FAF2F3";
     document.getElementById('email').style.border = "1.5px solid red";
     document.getElementById('email').classList.add('error');
   };
@@ -79,7 +103,6 @@ document.getElementById('submit').addEventListener('click', function(event) {
     errorMsg.textContent = "გთხოვთ შეიყვანოთ ელ-ფოსტა";
     setEmailErrorStyles();
   } else {
-    // Fetch request to login API
     fetch(`${apiBaseUrl}/login`, {
       method: "POST",
       headers: {"Content-Type": "application/json", "Authorization": `Bearer ${token}`},
@@ -87,6 +110,9 @@ document.getElementById('submit').addEventListener('click', function(event) {
     })
     .then((response) => {
       if (response.status === 204) {
+        // Save the token in localStorage
+        setAuthToken('yourAuthToken'); // Replace 'yourAuthToken' with the actual token you receive from the server
+        
         closeDisplay("login-container");
         toggleDisplay("SuccessfulLogin");
         changeButtonToAddBlog();
@@ -107,4 +133,3 @@ document.getElementById('submit').addEventListener('click', function(event) {
     });
   }
 });
-

@@ -8,18 +8,21 @@ body {
 }
 
 header {
-    height: 80px;
+    height: 96px;
     border-bottom: 1px solid transparent;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 
 #logo {
-    width: 150px;
-    height: 24px;
-    margin: 28px 0 0 76px;
+    width: 200px;
+    height: 32px;
+    /* margin: 28px 0 0 76px; */
+    margin-top: 33.6px;
+    margin-left: 101.5px;
+    
 }
 
-#login-btn, .add-blog-button {
+#login-btn{
     float: right;
     width: 93px;
     height: 40px;
@@ -38,44 +41,47 @@ header {
 }
 .add-blog-button {
     float: right;
-    width: 150px;
-    height: 40px;
+    width: 170px;
+    height: 45px;
+    margin: 20px 100px 0 0;
     padding: 10px 20px;
     background-color: #5d37f3;
     color: #ffffff;
     border-radius: 8px;
     border: none;
     font-family: 'FiraGO', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     text-align: left;
-    margin-right: 65px;
     cursor: pointer;
 }
 
 #Blog {
     float: left;
-    width: 225px;
-    height: 72px;
-    margin: 120px 0 0 89px;
-    font-size: 64px;
+    width: 300px;
+    height: 86.4px;
+    /* margin: 120px 0 0 89px; */
+    margin-top: 140px;
+    margin-left: 115px;
+    font-size: 77px;
     font-weight: 700;
-    line-height: 72px;
+    line-height: 86.4px;
     text-align: left;
 }
 
 #BlogImg {
     float: right;
-    width: 624px;
-    height: 200px;
+    width: 834.7px;
+    height: 240px;
     margin: 100px 100px 0 0;
+   
 }
 
 .categories {
     display: flex;
     justify-content: center;
-    margin-top: 350px;
+    margin-top: 410px;
 }
 
 .category-item {
@@ -218,6 +224,7 @@ h2 {
     line-height: 20px;
     text-align: left;
     background-color: #F7F7FF;
+    z-index: 10000;
   }
 
   #submit, #okay{
@@ -250,7 +257,8 @@ h2 {
 #succes
 {
 
-margin-top: 50px;
+margin-top: 35px;
+justify-content: center;
 
 }
 
@@ -263,4 +271,7 @@ line-height: 28px;
 letter-spacing: 0em;
 text-align: center;
 
-}
+}input:-webkit-autofill {
+    border: 1px solid #ff0404, !important;
+    /* Add other styles as needed */
+  }

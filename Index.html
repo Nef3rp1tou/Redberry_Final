@@ -10,8 +10,10 @@
     <header>
       <a href="/">
         <img id="logo" src="Media\RedBerryLogo.png" alt="Your Logo" />
+        <button onclick="logout()" id="logout-btn" style="display: inline">გამოსვლა</button>
       </a>
       <button onclick="toggleLoginForm()" id="login-btn">შესვლა</button>
+      
     </header>
     <h1 id="Blog">ბლოგი</h1>
     <img id="BlogImg" src="Media/Blogimg.png" alt="" />
@@ -21,7 +23,7 @@
       <h2>შესვლა</h2>
       <form id="loginForm" class="sign-in-form">
         <label id="emailLabel" for="email">ელ-ფოსტა</label>
-        <input type="text" name="email" id="email" placeholder="example@redberry.ge" />
+        <input type="text" name="email" id="email" placeholder="example@redberry.ge" autocomplete="off" />
         <span id="loginError" class="error-message">
           <img
             src="Media\error.png"
