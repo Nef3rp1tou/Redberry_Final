@@ -1,0 +1,274 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F3F2FA;
+    font-family: 'FiraGO', sans-serif;
+}
+
+header {
+    height: 96px;
+    border-bottom: 1px solid transparent;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
+
+#logo {
+    width: 200px;
+    height: 32px;
+    /* margin: 28px 0 0 76px; */
+    margin-top: 33.6px;
+    margin-left: 101.5px;
+    
+}
+
+#login-btn{
+    float: right;
+    width: 93px;
+    height: 40px;
+    margin: 20px 100px 0 0;
+    padding: 10px 20px;
+    background-color: #5d37f3;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    font-family: 'FiraGO', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+.add-blog-button {
+    float: right;
+    width: 170px;
+    height: 45px;
+    margin: 20px 100px 0 0;
+    padding: 10px 20px;
+    background-color: #5d37f3;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    font-family: 'FiraGO', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+#Blog {
+    float: left;
+    width: 300px;
+    height: 86.4px;
+    /* margin: 120px 0 0 89px; */
+    margin-top: 140px;
+    margin-left: 115px;
+    font-size: 77px;
+    font-weight: 700;
+    line-height: 86.4px;
+    text-align: left;
+}
+
+#BlogImg {
+    float: right;
+    width: 834.7px;
+    height: 240px;
+    margin: 100px 100px 0 0;
+   
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 410px;
+}
+
+.category-item {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.blur-effect {
+    filter: blur(3px);
+    z-index: 1;
+}
+
+.sign-in-container {
+    position: fixed;
+    width: 480px;
+    height: 290px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(71, 247, 18, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 30px;
+    height: 50px;
+    font-weight: 100;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sign-in-form label {
+    align-self: flex-start;
+    font-size: 16px;
+    color: #333;
+}
+
+.sign-in-form input {
+    padding: 15px;
+    
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.sign-in-form button {
+    padding: 15px;
+    background-color: #6A5ACD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.sign-in-form button:hover {
+    background-color: #5f4bb6;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+#error-icon, #error-message {
+    color: red;
+    font-size: 14px;
+    align-items: center;
+    gap: 5px;  
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+#loginError {
+    display: none;
+    margin-top: -30px;
+    margin-right: auto;
+}
+
+.Logined {
+    position: fixed;
+    width: 480px;
+    height: 290px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(71, 247, 18, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.close-button2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 30px;
+    height: 50px;
+    font-weight: 100;
+}
+
+
+#email{
+    padding-left: 15px;
+   
+    border-radius: 12px;
+    border: 1.5px solid #5d37f3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    background-color: #F7F7FF;
+    z-index: 10000;
+  }
+
+  #submit, #okay{
+    width: 450px;
+    height: 44px;
+    margin-top: 25px;
+    border-radius: 8px;
+    padding: 10px, 20px, 10px, 20px;
+    gap: 10px;
+    color: #ffffff;
+    border: none;
+    background-color: #5d37f3;
+    font-family: 'FiraGO', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+
+#emailLabel {
+    color: rgba(26, 26, 31, 1);
+    width: 76px;
+    height: 20px;
+    font-family: 'FiraGO';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+}
+#succes
+{
+
+margin-top: 35px;
+justify-content: center;
+
+}
+
+.succes-label 
+{
+    font-family: FiraGO;
+font-size: 20px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: center;
+
+}
