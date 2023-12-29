@@ -1,4 +1,4 @@
-import { token, apiBaseUrl } from "./Api.js";
+import { token, apiBaseUrl } from "Api.js";
 document.addEventListener('DOMContentLoaded', () => {
 function saveInput(inputId) {
     const inputField = document.getElementById(inputId);
