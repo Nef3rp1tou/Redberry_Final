@@ -1,4 +1,4 @@
-import { token, apiBaseUrl } from "./Api.js";
+import { token, apiBaseUrl } from "Api.js";
 
 // Function to get all categories
 export function getAllCategories() {
