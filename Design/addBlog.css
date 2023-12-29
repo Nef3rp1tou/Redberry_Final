@@ -1,39 +1,468 @@
-@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+/* Importing FiraGO font from external source */
+@import url("https://free.bboxtype.com/embedfonts/?family=FiraGO:400");
 
+/* Global styles */
 body {
-    margin: 0;
-    padding: 0;
-    background: #FBFAFF;
-    font-family: 'FiraGO', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fbfaff;
+  font-family: "FiraGO", sans-serif;
 }
-#add-blog-container.h1
-{   
-     font-family: 'FiraGO', sans-serif;
+input, ::placeholder {
+    font-family: "FiraGO", sans-serif;
+  }
+/* Blog text styles */
+#Blog-text {
+  font-family: "FiraGO", sans-serif;
+  font-size: 17px !important;
+  font-weight: 700;
+  line-height: 53.3333px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* Add photo styles */
+#add-photo {
+  font-family: FiraGO;
+  font-size: 17.6667px;
+  font-weight: 500;
+  line-height: 26.6667px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* Add blog container styles */
+#add-blog-container {
+  position: absolute;
+  width: 680px;
+  max-height: max-content;
+  top: 120px;
+  left: 590px;
+  gap: 67px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  height: 96px;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(0deg, #ffffff, #ffffff);
+  border-color: #e4e3eb;
+}
+
+/* Logo styles */
+#logo {
+  width: 200px;
+  height: 32px;
+  margin: 28px 0 0 76px;
+}
+
+/* Element grouping styles */
+#author-title,
+#date-category,
+#publishing {
+  margin-top: 20px;
+  width: 98.5%;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Label styles */
+#author label,
+#title label,
+#date label,
+#category-selection label,
+#email label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1a1a1f;
+}
+
+/* Element styles */
+#author,
+#title,
+#date,
+#category-selection,
+#email,
+#enter-date-container,
+#publish-btn,
+#nothing {
+  color: #85858d;
+  font-family: "FiraGO", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 10px;
+  text-align: left;
+  width: 320px;
+  gap: 20px !important;
+}
+
+/* Input styles */
+#author input,
+#title input,
+#date input,
+#email input {
+  font-size: 16px;
+}
+
+/* Form container styles */
+#input-author,
+#input-title,
+#enter-date,
+#category-input-container,
+#email-input {
+  margin-top: 10px;
+  display: flex;
+  width: 98%;
+  height: 44px;
+  border: 1px solid #e4e3eb;
+  border-radius: 12px;
+  background-color: #fcfcfd;
+  padding: 0 0 0 15px;
+  
+}
+
+/* Author criteria styles */
+#authorCriteria1,
+#authorCriteria2,
+#authorCriteria3 {
+  position: relative;
+  margin-left: 20px;
+}
+
+#authorCriteria1::before,
+#authorCriteria2::before,
+#authorCriteria3::before {
+  content: "\2022";
+  margin-left: -15px;
+  position: absolute;
+}
+
+/* Image upload form styles */
+#upload-image-form {
+  width: 99.2%;
+  height: 190px;
+  top: 28px;
+  border-radius: 12px;
+  border: 3Q #b5b5b9;
+  border-style: dashed;
+  background-color: #f4f3ff;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* New form container styles */
+#new-form-container {
+  justify-content: space-between;
+  display: fixed;
+}
+
+/* Custom form styles */
+#custom-form {
+  display: flex;
+  align-items: center;
+  width: 99.2%;
+  height: 70px;
+  top: 28px;
+  border-radius: 12px;
+  border: none;
+  position: relative;
+  background-color: #f4f3ff;
+}
+
+/* File name label styles */
+#file-name {
+  margin-left: 20px;
+  width: 84px;
+  height: 20px;
+  font-family: "FiraGO";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* New form container button styles */
+#new-form-container button {
+  display: flex;
+  margin-left: 540px;
+  margin-top: -30px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f4f3ff;
+}
+
+/* Gallery image icon styles */
+#galleryImageIcon {
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Description field styles */
+#input-description-field {
+  font-family: "FiraGO";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 15px;
+  margin-top: 10px;
+  width: 95%;
+  height: 144px;
+  top: 424px;
+  border-radius: 12px;
+  border: 1px solid #e4e3eb;
+  background: #fcfcfd;
+}
+
+/* Below textarea styles */
+#below-textarea {
+  color: #85858d;
+  font-family: "FiraGO", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+/* Publish button styles */
+#publish {
+  width: 300px;
+  height: 44px;
+  background-color: #5d37f3;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  gap: 10px;
+  line-height: 20px;
+  font-family: "FiraGO", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 150px;
+}
+
+/* Disabled state for publish button */
+#publish:disabled {
+  background-color: #e4e3eb;
+}
+
+/* Image class styles (display: none) */
+.image {
+  display: none;
+}
+
+/* Custom label styles */
+#custom-label {
+  cursor: pointer;
+  font-family: "FiraGO", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1a1f;
+  margin-top: 10px;
+}
+
+/* Choose styles */
+#choose {
+  font-family: "FiraGO", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Upload icon styles */
+#upload-icon {
+  margin-top: -30px;
+  width: 60px;
+  height: 60px;
+}
+
+/* Category input container styles */
+#category-input-container {
+  position: relative;
+  border: 1px solid #e4e3eb;
+  border-radius: 12px;
+  background-color: #fcfcfd;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
 
 
+/* Selected category chip styles */
+#selected-categories .category-chip {
+  display: inline-block;
+  align-items: top;
+  padding: 5px 10px;
+  margin: 2px;
+  background-color: #ddd;
+  border-radius: 15px;
+  font-size: 14px;
+  
 }
-#add-blog-container
-{
-    position: absolute;
-    width: 800px;
-    height: 928px;
-    top: 120px;
-    left: 360px;
-    gap: 40px;
-    background-color: #f0f0f0; /* Set your desired background color */
-    /* Add any other styling you may need */
+
+
+/* Remove button for each selected category styles */
+#selected-categories .remove-category {
+  display: inline-block;
+  margin-left: 8px;
+  cursor: pointer;
+  
+}
+
+/* Dropdown content styles */
+#categories-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: calc(100% - 30px);
+  border: 1px solid #e4e3eb;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 140px;
+  overflow-y: auto;
+  top: 100%;
+  left: 0;
+}
+
+
+
+
+/* Hide the native input field */
+#category-input {
+  display: none;
+}
+
+/* Selected categories styles */
+#selected-categories {
+  display: inline-block;
+  overflow-x: auto;
+  white-space: nowrap;
+
+}
+
+/* Active state for selected categories (when dragging) */
+#selected-categories:active {
+  cursor: pointer;
+}
+
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: flex;
+    margin-right: 10px;
+    font: "FiraGO", sans-serif;
+    
   }
 
-header {
-    text-align: center;
-    height: 80px;
-    border-bottom: 1px solid transparent;
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    border-color: #E4E3EB;
+  /* Remove the default focus styles */
+  input[type="date"]:focus {
+    outline: none;
+    border: 1px solid #ccc; /* You can set the border color to the desired color */
+    
+  }
+
+
+  #back-button {
+   width: 60px;
+   height: 50px;
+   margin-top: 50px;
+   margin-left: 90px;
+    background:none;
+    border: none;
+   
+   
+    cursor: pointer;
+  }
+
+  #back-button img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .hidden-checkbox {
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+  }
+  .category-chip input[type="checkbox"]:checked {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #e0e0e0; /* Example background color */
+    border-radius: 15px; /* Rounded corners for chip look */
+    cursor: pointer;
+    display: none;
+  }
+/* Style for the category options in the dropdown */
+.category-option {
+  cursor: pointer;
+  display: block;
+  padding: 10px; 
+  margin: 2px 0; 
+  
 }
 
-#logo {
-    width: 150px;
-    height: 24px;
-    margin: 28px 0 0 76px;
+/* Adjustments for category dropdown options */
+#categories-dropdown .category-option  {
+  padding: 10px;
+  cursor: pointer;
+  display: flex; /* Align checkbox and label */
+  align-items: center; /* Center items vertically */
+  border-bottom: 1px solid #e4e3eb;
+  
+}
+
+#categories-dropdown .category-option:last-child {
+  border-bottom: none;
+}
+
+#categories-dropdown .category-option:hover {
+  background-color: #e4e3eb; /* Slight hover effect */
+}
+
+
+/* Custom styles when a category is checked */
+.category-option input[type="checkbox"]:checked + label {
+  font-weight: bold; /* Example style */
+  background-color: #d0e0ff; /* Example style */
+}
+
+
+
+.input-valid {
+  border-color: #14D81C; /* Green for valid */
+}
+
+.input-invalid {
+  border-color: #EA1919; /* Red for invalid */
+}
+
+/* Default input style, if you have one */
+.input-default {
+  border-color: #e4e3eb; /* Replace with your default color */
 }

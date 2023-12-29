@@ -271,7 +271,4 @@ line-height: 28px;
 letter-spacing: 0em;
 text-align: center;
 
-}input:-webkit-autofill {
-    border: 1px solid #ff0404, !important;
-    /* Add other styles as needed */
-  }
+}

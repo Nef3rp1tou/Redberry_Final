@@ -1,7 +1,7 @@
 import { token, apiBaseUrl } from "./Api.js";
 
 // Function to get all categories
-function getAllCategories() {
+export function getAllCategories() {
   return fetch(`${apiBaseUrl}/categories`, {
     headers: {
       'Authorization': `Bearer ${token}`
@@ -35,6 +35,18 @@ function displayCategories(categories) {
     categoryDiv.innerText = category.title;
 
     categoriesContainer.appendChild(categoryDiv);
+  });
+}
+
+export function populateCategoryDropdown() {
+  getAllCategories().then(categories => {
+    const dropdown = document.getElementById('categories-dropdown');
+    categories.forEach(category => {
+      const option = document.createElement('option');
+      option.value = category.id; // Assuming each category has an id
+      option.textContent = category.title;
+      dropdown.appendChild(option);
+    });
   });
 }
 

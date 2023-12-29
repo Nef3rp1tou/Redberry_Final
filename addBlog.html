@@ -1,19 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Website</title>
-    <link rel="stylesheet" href="/Design/addBlog.css" />
-  </head>
-  <body>
-    <header>
-      <img id="logo" src="Media\RedBerryLogo.png" alt="Your Logo" />
-    </header>
-    <div id="add-blog-container">
-      <h1 id="Blog">ბლოგის დამატება</h1>
-    </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Website</title>
+  <link rel="stylesheet" href="/Design/addBlog.css" />
+</head>
+
 <body>
-    
+  <header>
+    <img id="logo" src="Media\RedBerryLogo.png" alt="Your Logo" />
+  </header>
+  <div id="back-button-container">
+    <button id="back-button" onclick="goToIndex()">
+      <img src="Media\Arrow.png" alt="Back Arrow" />
+    </button>
+  </div>
+  <div id="add-blog-container">
+    <div id="Blog-text">
+      <h1>ბლოგის დამატება</h1>
+    </div>
+    <div id="add-photo">
+      <label for="photo" id="blogImage">ატვირთეთ ფოტო</label><br />
+      <form id="upload-image-form" class="upload-image">
+        <img id="upload-icon" src="media/folder-add.png" alt="upload-icon" /><br />
+        <label for="image" id="custom-label">
+          ჩააგდეთ ფაილი აქ ან
+          <a href="#" onclick="document.getElementById('image').click(); return false;">აირჩიეთ ფაილი</a>
+        </label>
+        <input type="file" id="image" name="image" class="image" accept="image/*" style="display: none" />
+      </form>
+    </div>
+    <div id="new-form-container" style="display: none">
+      <form id="custom-form">
+        <img id="galleryImageIcon" src="Media\galleryIcon.png" alt="" />
+        <span id="file-name"></span>
+      </form>
+    </div>
+
+    <br />
+    <div id="author-title">
+      <div id="author">
+        <label for="author">ავტორი *</label>
+        <input type="text" id="input-author" placeholder="შეიყვანეთ ავტორი" />
+        <div id="author-valid-criteria">
+          <p id="authorCriteria1">მინიმუმ 4 სიმბოლო</p>
+          <p id="authorCriteria2">მინიმუმ 2 სიტყვა</p>
+          <p id="authorCriteria3">მხოლოდ ქართული სიმბოლოები</p>
+        </div>
+      </div>
+      <br />
+      <div id="title">
+        <label for="title">სათაური *</label>
+        <input type="text" id="input-title" placeholder="შეიყვანეთ სათაური" />
+        <p id="titleCriteria" class="valid-criteria">მინიმუმ 2 სიმბოლო</p>
+      </div>
+    </div>
+    <br />
+    <div id="description-container">
+      <label for="input-description-field">აღწერა *</label>
+      <div id="input-description">
+        <textarea name="textarea" id="input-description-field" cols="30" rows="10"
+          placeholder="შეიყვანეთ აღწერა"></textarea>
+        <p id="below-textarea">მინიმუმ 2 სიმბოლო</p>
+      </div>
+    </div>
+    <br />
+    <div id="date-category">
+      <div id="date">
+        <label for="enter-date">გამოქვეყნების თარიღი *</label>
+        <div id="enter-date-container">
+          <input type="date" id="enter-date" placeholder="აირჩიეთ თარიღი" />
+        </div>
+      </div>
+      <div id="category-selection">
+        <label for="category-input">კატეგორია *</label>
+        <div id="category-input-container" style="position: relative">
+        
+          <div id="selected-categories" aria-live="polite"></div>
+      
+         
+          <div id="category-input-placeholder" style="
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                color: #a9a9a9;
+              ">
+            შეიყვანეთ სათაური
+          </div>
+      
+          
+          <div id="categories-dropdown" class="dropdown-content" style="display: none"></div>
+      
+          <input type="text" id="category-input" class="hidden-checkbox" aria-haspopup="listbox" style="display: none" />
+          
+         
+          <button id="dropdown-toggle-btn" type="button" aria-expanded="false" style="
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url('Media/arrow-down2.png') no-repeat center;
+                border: none;
+                width: 20px;
+                height: 20px;
+              " aria-label="More options"></button>
+        </div>
+      </div>
+      
+    </div>
+    <br />
+    <div id="email">
+      <label for="email-input">ელ-ფოსტა</label>
+      <input type="email" id="email-input" placeholder="example@redberry.ge" />
+      <div id="loginError" class="error-message" style="display: none">
+        <img src="Media/error.png" class="error-icon" id="error-icon" alt="Error Icon" />
+        <p id="error-message"></p>
+      </div>
+    </div>
+
+    <br />
+    <div id="publishing">
+      <div id="nothing"></div>
+      <div id="publish-btn">
+        <input id="publish" type="submit" value="გამოქვეყნება" disabled />
+      </div>
+    </div>
+  </div>
+  <script>
+    function goToIndex() {
+      window.location.href = "index.html";
+    }
+  </script>
+  <script type="module" src="/JSS/addBlog.js" defer></script>
 </body>
+
 </html>

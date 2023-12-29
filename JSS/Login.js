@@ -36,6 +36,7 @@ window.closeSuccessfulLogin = () => closeDisplay("SuccessfulLogin");
 window.logout = () => {
   // Clear the token from localStorage
   localStorage.removeItem('authToken');
+  sessionStorage.clear();
 };
 
 // Function to reset the login form

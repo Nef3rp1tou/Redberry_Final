@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Enter a brief description of your website here" />
     <title>Your Website</title>
     <link rel="stylesheet" href="/Design/index.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <a href="/">
-        <img id="logo" src="Media\RedBerryLogo.png" alt="Your Logo" />
-        <button onclick="logout()" id="logout-btn" style="display: inline">გამოსვლა</button>
-      </a>
-      <button onclick="toggleLoginForm()" id="login-btn">შესვლა</button>
-      
+        <a href="/">
+            <img id="logo" src="/Media/RedBerryLogo.png" alt="RedBerry Logo" />
+        </a>
+        <button onclick="logout()" id="logout-btn" class="inline-button">გამოსვლა</button>
+        <button onclick="toggleLoginForm()" id="login-btn">შესვლა</button>
     </header>
-    <h1 id="Blog">ბლოგი</h1>
-    <img id="BlogImg" src="Media/Blogimg.png" alt="" />
+    
+    <main>
+        <h1 id="Blog">ბლოგი</h1>
+        <img id="BlogImg" src="/Media/Blogimg.png" alt="Blog Image Description" />
 
-    <div id="login-container" class="sign-in-container" style="display: none">
-      <div class="close-button" onclick="closeLoginForm()">x</div>
-      <h2>შესვლა</h2>
-      <form id="loginForm" class="sign-in-form">
-        <label id="emailLabel" for="email">ელ-ფოსტა</label>
-        <input type="text" name="email" id="email" placeholder="example@redberry.ge" autocomplete="off" />
-        <span id="loginError" class="error-message">
-          <img
-            src="Media\error.png"
-            class="error-icon"
-            id="error-icon"
-            alt="Error Icon"
-          />
-          <p id="error-message"></p>
-        </span>
-        <button type="submit" id="submit">შესვლა</button>
-      </form>
-    </div>
+        <div id="login-container" class="sign-in-container hidden">
+            <div class="close-button" onclick="closeLoginForm()">x</div>
+            <h2>შესვლა</h2>
+            <form id="loginForm" class="sign-in-form">
+                <label id="emailLabel" for="email">ელ-ფოსტა</label>
+                <input type="text" name="email" id="email" placeholder="example@redberry.ge" autocomplete="off" />
+                <span id="loginError" class="error-message">
+                    <img src="/Media/error.png" class="error-icon" id="error-icon" alt="Error Icon" />
+                    <p id="error-message"></p>
+                </span>
+                <button type="submit" id="submit">შესვლა</button>
+            </form>
+        </div>
 
-    <div id="SuccessfulLogin" class="Logined" style="display: none">
-      <div class="close-button2" onclick="closeSuccessfulLogin()">x</div>
-      <div id="succes">
-        <img src="Media/tick-circle.png" id="success" alt="">
-      <h2 id="success-label">წარმატებული ავტორიზაცია</h2>
-      <button id="okay" onclick="closeSuccessfulLogin()">კარგი</button>
-      </div>
-    </div>
+        <div id="SuccessfulLogin" class="Logined hidden">
+            <div class="close-button2" onclick="closeSuccessfulLogin()">x</div>
+            <div id="succes">
+                <img src="/Media/tick-circle.png" id="success" alt="Success Tick">
+                <h2 id="success-label">წარმატებული ავტორიზაცია</h2>
+                <button id="okay" onclick="closeSuccessfulLogin()">კარგი</button>
+            </div>
+        </div>
 
-    <div id="categories-container" class="categories"></div>
+        <div id="categories-container" class="categories"></div>
+    </main>
 
     <script type="module" src="/JSS/Category.js" defer></script>
     <script type="module" src="/JSS/Api.js" defer></script>
     <script type="module" src="/JSS/Login.js" defer></script>
-  </body>
+</body>
 </html>
