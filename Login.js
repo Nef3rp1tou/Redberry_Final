@@ -1,4 +1,4 @@
-import { token, apiBaseUrl } from "./Api.js";
+import { token, apiBaseUrl } from "Api.js";
 const regex = /^[a-zA-Z0-9._%+-]+@redberry\.ge$/i;
 
 // Helper function to toggle styles for blurred elements
